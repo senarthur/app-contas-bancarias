@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<main>
+    <button class="cadastro" [routerLink]="['/listagem']">
+        Cadastrar Conta Bancárias
+        <i class="bi bi-plus"></i>
+    </button>
+    <h2>Contas Cadastradas</h2>
+    <span *ngIf="naoCadastrado">Não há contas cadastradas</span>
+    <table *ngIf="cadastro">
+        <thead>
+            <tr>
+                <th>Código do Banco</th>
+                <th>Agência</th>
+                <th>Conta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>1025</td>
+                <td>62534680</td>
+            </tr>
+            <tr>
+                <td>023</td>
+                <td>1010</td>
+                <td>62084280</td>
+            </tr>
+            <tr>
+                <td>112</td>
+                <td>2340</td>
+                <td>90231863</td>
+            </tr>
+            <tr>
+                <td>112</td>
+                <td>9090</td>
+                <td>98014187</td>
+            </tr>
+            <tr>
+                <td>115</td>
+                <td>8654</td>
+                <td>20986949</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

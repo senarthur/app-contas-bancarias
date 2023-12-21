@@ -1,0 +1,23 @@
+header {
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+ul a {
+    font-size: .8rem;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}

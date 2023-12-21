@@ -1,0 +1,39 @@
+main {
+    padding: 3%;
+}
+
+.busca {
+    display: flex;
+    width: 100%;
+    gap: 1%;
+    align-items: center;
+}
+
+.busca input[type="search"] {
+    padding: .8%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    border-radius: 3px;
+}
+
+.busca input[type="search"]:hover {
+    border-bottom-color: rgba(40, 40, 40, 0.671);    
+}
+
+.busca input[type="search"]:focus {
+    border-bottom-color: #7380ec;
+}
+
+.busca .bi-search {
+    padding: .8%;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.busca .bi-search:hover {
+    background-color: #7380ec;
+    color: white;
+}
