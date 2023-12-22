@@ -19,7 +19,6 @@ export class ServiceService {
   public buscarBancos() {
     return this.http.get(this.url).pipe(map(result => { 
       const bancos: Banco[] = (result as any);
-      console.log(bancos);
       return bancos;
     }));
   }

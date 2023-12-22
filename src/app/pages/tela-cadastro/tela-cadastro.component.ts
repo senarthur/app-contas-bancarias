@@ -22,9 +22,14 @@ export class TelaCadastroComponent implements OnInit {
 
   ngOnInit(): void {
     const index: number = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
-    
+    this.fetchData(index);
+  }
+
+  public fetchData(index:number) {
     this.service.find(index).subscribe(resp => {
       this.bankInfo = resp;
+    }, err => {
+      console.log(err);
     })
   }
 

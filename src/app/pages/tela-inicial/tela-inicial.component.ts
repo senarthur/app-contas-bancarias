@@ -22,12 +22,9 @@ export class TelaInicialComponent implements OnInit {
     this.contas = this.service.getDados();
     
     if(this.contas === undefined ||this.contas.length === 0) {
-      this.naoCadastrado = true;
-      this.cadastro = false;
+      this.naoCadastrado = !this.naoCadastrado;
+      this.cadastro = !this.cadastro;
       return;
     }
-    
-    this.naoCadastrado = false;
-    this.cadastro = true;
   }
 }
