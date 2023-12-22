@@ -2,7 +2,7 @@
 
 <main>
     <button class="cadastro" [routerLink]="['/listagem']">
-        Cadastrar Conta Bancárias
+        Cadastrar Conta Bancária
         <i class="bi bi-plus"></i>
     </button>
     <h2>Contas Cadastradas</h2>
@@ -16,30 +16,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>001</td>
-                <td>1025</td>
-                <td>62534680</td>
-            </tr>
-            <tr>
-                <td>023</td>
-                <td>1010</td>
-                <td>62084280</td>
-            </tr>
-            <tr>
-                <td>112</td>
-                <td>2340</td>
-                <td>90231863</td>
-            </tr>
-            <tr>
-                <td>112</td>
-                <td>9090</td>
-                <td>98014187</td>
-            </tr>
-            <tr>
-                <td>115</td>
-                <td>8654</td>
-                <td>20986949</td>
+            <tr *ngFor="let conta of contas, let i = index">
+                <td>{{conta.code}}</td>
+                <td>{{conta.agencia}}</td>
+                <td>{{conta.conta}}</td>
             </tr>
         </tbody>
     </table>

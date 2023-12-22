@@ -7,6 +7,7 @@ main {
     width: 100%;
     gap: 1%;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .busca input[type="search"] {
@@ -26,14 +27,19 @@ main {
     border-bottom-color: #7380ec;
 }
 
-.busca .bi-search {
-    padding: .8%;
-    border-radius: 3px;
+.linha {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr;
+    padding: .8% 1%;
     background-color: #fff;
+    margin-top: 5px;
     cursor: pointer;
 }
 
-.busca .bi-search:hover {
-    background-color: #7380ec;
-    color: white;
+.linha:hover {
+    background-color: rgba(115, 128, 236, 0.8);
+}
+
+.linha:hover span {
+    color: #fff;
 }

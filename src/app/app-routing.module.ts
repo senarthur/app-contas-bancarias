@@ -19,7 +19,7 @@ const routes: Routes = [
     component: TelaListagemComponent
   },
   {
-    path: 'cadastro',
+    path: 'cadastro/:id',
     component: TelaCadastroComponent
   }
 ];

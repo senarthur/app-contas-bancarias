@@ -1,7 +1,11 @@
 <app-header></app-header>
 <main>
     <div class="busca">
-        <input type="search" name="buscar" id="busca" placeholder="Digite o código do banco">
-        <i class="bi bi-search"></i>
+        <input [ngModel]="pesquisar" (ngModelChange)="onSearchChange($event)" type="search" name="buscar" id="busca" placeholder="Digite o código do banco">
+    </div>
+    <div class="linha" *ngFor="let banco of getBancos()" [routerLink]="['/cadastro', banco.code]" >
+        <span>{{banco.code}}</span>
+        <span>{{banco.name}}</span>
+        <span>{{banco.fullName}}</span>
     </div>
 </main>

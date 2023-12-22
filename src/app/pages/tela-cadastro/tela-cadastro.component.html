@@ -1,7 +1,40 @@
 <app-header></app-header>
 
 <section>
-    <form action="">
-        <input type="text" disabled>
+    <h2>Cadastro</h2>
+    <form #form="ngForm" class="form" [formGroup]="bancoForm">
+        <div class="bankInfo">
+            <div class="form-group">
+                <label for="nome">ISPB</label>
+                <input type="text" class="form-control" name="ispb" id="ispb" [value]="bankInfo.ispb" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nome">Código</label>
+                <input type="text" class="form-control" name="code" id="code" [value]="bankInfo.code" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="name" id="name" [value]="bankInfo.name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" class="form-control" name="name" id="name" [value]="bankInfo.fullName" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Agência</label>
+            <input type="text" class="form-control" name="agencia" id="agencia" formControlName="agencia" [(ngModel)]="agencia" required>
+            <p *ngIf="(bancoForm.get('agencia')?.errors?.['required'] || bancoForm.get('agencia')?.errors?.['minlength']) && bancoForm.get('agencia')?.touched">
+                A agência deve ter no mínimo 4 caracteres
+            </p>
+        </div>
+        <div class="form-group">
+            <label for="nome">Conta</label>
+            <input type="text" class="form-control" name="conta" id="conta" formControlName="conta" [(ngModel)]="conta" required>
+            <p *ngIf="(bancoForm.get('conta')?.errors?.['required'] || bancoForm.get('conta')?.errors?.['minlength']) && bancoForm.get('conta')?.touched">
+                A conta deve ter no mínimo 6 caracteres
+            </p>
+        </div>
+        <input type="submit" value="Salvar" (click)="save()">
     </form>
 </section>
